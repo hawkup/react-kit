@@ -7,7 +7,6 @@ import {
 import "@reach/accordion/styles.css";
 import "./accordion.css";
 
-
 const StyledAccordion = () => (
   <Accordion>
     <AccordionItem>

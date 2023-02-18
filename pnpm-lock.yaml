@@ -9,6 +9,8 @@ specifiers:
   '@emotion/react': ^11.10.6
   '@emotion/styled': ^11.10.6
   '@headlessui/react': ^1.7.11
+  '@playwright/experimental-ct-react': ^1.30.0
+  '@playwright/test': ^1.30.0
   '@radix-ui/react-accordion': ^1.1.0
   '@radix-ui/react-avatar': ^1.0.1
   '@reach/accordion': ^0.18.0
@@ -57,6 +59,8 @@ dependencies:
   styled-components: 5.3.6_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
+  '@playwright/experimental-ct-react': 1.30.0
+  '@playwright/test': 1.30.0
   '@storybook/addon-essentials': 7.0.0-beta.50_biqbaboplfbrettd7655fr4n2y
   '@storybook/addon-interactions': 7.0.0-beta.50_biqbaboplfbrettd7655fr4n2y
   '@storybook/addon-links': 7.0.0-beta.50_biqbaboplfbrettd7655fr4n2y
@@ -1898,6 +1902,32 @@ packages:
       fastq: 1.15.0
     dev: true
 
+  /@playwright/experimental-ct-react/1.30.0:
+    resolution: {integrity: sha512-SjjmPAaqF6u4fAyLvYCl5LunHs+kH7LTmiwG1IrjdsPjKazX8EffaVNI54PtblExLcKiyhy6Gpwn4rDDu3LxJg==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@playwright/test': 1.30.0
+      '@vitejs/plugin-react': 3.1.0_vite@4.1.2
+      vite: 4.1.2
+    transitivePeerDependencies:
+      - '@types/node'
+      - less
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+    dev: true
+
+  /@playwright/test/1.30.0:
+    resolution: {integrity: sha512-SVxkQw1xvn/Wk/EvBnqWIq6NLo1AppwbYOjNLmyU0R1RoQ3rLEBtmjTnElcnz8VEtn11fptj1ECxK0tgURhajw==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dependencies:
+      '@types/node': 18.14.0
+      playwright-core: 1.30.0
+    dev: true
+
   /@radix-ui/primitive/1.0.0:
     resolution: {integrity: sha512-3e7rn8FDMin4CgeL7Z/49smCA3rFYY3Ha2rUQ7HRWFadS5iCRw08ZgVT1LaNTCNqgvrUiyczLflrVrF0SRQtNA==}
     dependencies:
@@ -3309,7 +3339,7 @@ packages:
     resolution: {integrity: sha512-8bVUjXZvJacUFkJXHdyZ9iH1Eaj5V7I8c4NdH5sQJsdXkqT4CA5Dhb4yb4VE/3asyx4L9ayZr1NIhTsWHczmMw==}
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 16.18.12
+      '@types/node': 18.14.0
     dev: true
 
   /@types/graceful-fs/4.1.6:
@@ -3377,7 +3407,7 @@ packages:
   /@types/node-fetch/2.6.2:
     resolution: {integrity: sha512-DHqhlq5jeESLy19TYhLakJ07kNumXWjcDdxXsLUMJZ6ue8VZJj4kLPQVE/2mdHh3xZziNF1xppu5lwmS53HR+A==}
     dependencies:
-      '@types/node': 16.18.12
+      '@types/node': 18.14.0
       form-data: 3.0.1
     dev: true
 
@@ -6936,6 +6966,12 @@ packages:
       jsonc-parser: 3.2.0
       mlly: 1.1.1
       pathe: 1.1.0
+    dev: true
+
+  /playwright-core/1.30.0:
+    resolution: {integrity: sha512-7AnRmTCf+GVYhHbLJsGUtskWTE33SwMZkybJ0v6rqR1boxq2x36U7p1vDRV7HO2IwTZgmycracLxPEJI49wu4g==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /polished/4.2.2:

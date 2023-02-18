@@ -7,7 +7,6 @@ import { Accordion } from './accordion'
 
 test('click expand accordion', async () => {
   render(<Accordion />)
-  expect(true).toBe(true)
 
   await userEvent.click(screen.getByText('Is team pricing available?'))
   await screen.findByTestId('accordion-panel')

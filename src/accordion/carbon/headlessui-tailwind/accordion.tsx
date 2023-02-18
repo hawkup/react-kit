@@ -1,9 +1,11 @@
 import { Disclosure } from '@headlessui/react'
 
+import 'virtual:fonts.css'
+
 export const Accordion = () => {
   return (
     <Disclosure>
-      <Disclosure.Button className="py-2" data-testid="accordion-head">
+      <Disclosure.Button className="font-['IBM_Plex_Sans'] py-2" data-testid="accordion-head">
         Is team pricing available?
       </Disclosure.Button>
       <Disclosure.Panel className="text-gray-500" data-testid="accordion-panel">

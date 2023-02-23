@@ -1,3 +1,56 @@
+[data-reach-accordion] {
+  font-family: 'IBM Plex Sans';
+  font-size: 14px;
+  color: #161616;
+}
+
+[data-reach-accordion-item] {
+  border-bottom: 1px solid gainsboro;
+  display: flex;
+  flex-direction: column;
+}
+[data-reach-accordion-item][data-state="open"] {
+  /* styles for all open accordion items */
+}
+[data-reach-accordion-item][data-state="collapsed"] {
+  /* styles for all collapsed accordion items */
+}
+[data-reach-accordion-item][data-disabled] {
+  /* styles for all disabled accordion items */
+}
+[data-reach-accordion-item][data-read-only] {
+  /* styles for all read-only accordion items */
+}
+
 [data-reach-accordion-button] {
-  padding: 20px;
+  all: unset;
+  display: flex;
+  font-family: inherit;
+  background-color: transparent;
+  padding: 14px 16px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+[data-reach-accordion-button][aria-expanded] {
+  /* styles for buttons in open accordion items */
+}
+[data-reach-accordion-button][aria-expanded="true"] > svg {
+  transform: rotate(180deg);
+}
+[data-reach-accordion-button][disabled] {
+  /* styles for all buttons in disabled accordion items */
+}
+
+[data-reach-accordion-panel] {
+  padding: 8px 16px 24px;
+}
+[data-reach-accordion-panel][data-state="open"] {
+  /* styles for all open accordion panels */
+}
+[data-reach-accordion-panel][data-state="collapsed"] {
+  /* styles for all collapsed accordion panels */
+}
+[data-reach-accordion-panel][data-disabled] {
+  /* styles for all disabled accordion panels */
 }

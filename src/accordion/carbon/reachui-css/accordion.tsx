@@ -1,36 +1,29 @@
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-} from "@reach/accordion";
+import * as React from "react";
+import * as AccordionReachUI from "@reach/accordion";
+import type { AccordionProps, AccordionItemProps, AccordionButtonProps, AccordionPanelProps } from "@reach/accordion";
+
+import { ChevronDown } from '../icons/chevron-down';
+
 import "@reach/accordion/styles.css";
 import "./accordion.css";
 
-const StyledAccordion = () => (
-  <Accordion>
-    <AccordionItem>
-      <h3>
-        <AccordionButton>Step 1: Do a thing</AccordionButton>
-      </h3>
-      <AccordionPanel>
-        Here are some detailed instructions about doing a thing. I am very
-        complex and probably contain a lot of content, so a user can hide or
-        show me by clicking the button above.
-      </AccordionPanel>
-    </AccordionItem>
-    <AccordionItem>
-      <h3>
-        <AccordionButton>Step 2: Do another thing</AccordionButton>
-      </h3>
-      <AccordionPanel>
-        Here are some detailed instructions about doing yet another thing.
-        There are a lot of things someone might want to do, so I am only going
-        to talk about doing that other thing. I'll let my fellow accordion
-        items go into detail about even more things.
-      </AccordionPanel>
-    </AccordionItem>
-  </Accordion>
-)
+export function Accordion(props: AccordionProps) {
+  return <AccordionReachUI.Accordion {...props} />
+}
 
-export { StyledAccordion as Accordion }
+Accordion.Item = React.forwardRef<HTMLDivElement, AccordionItemProps>(function AccordionItem(props, ref) {
+  return <AccordionReachUI.AccordionItem {...props} ref={ref} />
+})
+
+Accordion.Header = React.forwardRef<HTMLButtonElement, AccordionButtonProps>(function AccordionHeader({ children, ...props }, ref) {
+  return (
+    <AccordionReachUI.AccordionButton {...props} ref={ref}>
+      {children}
+      <ChevronDown />
+    </AccordionReachUI.AccordionButton>
+  )
+})
+
+Accordion.Panel = React.forwardRef<HTMLDivElement, AccordionPanelProps>(function AccordionPanel(props, ref) {
+  return <AccordionReachUI.AccordionPanel {...props} ref={ref} />
+})

@@ -10,6 +10,9 @@ const meta = {
   decorators: [
     (Story) => (
       <>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+        </style>
         <style>{tailwindcss.toString()}</style>
         <Story />
       </>
@@ -21,7 +24,13 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-
 export const Basic: Story = {
-  args: {}
+  render: (args) => (
+    <Accordion {...args}>
+      <Accordion.Item>
+        <Accordion.Header>Is team pricing available?</Accordion.Header>
+        <Accordion.Panel>Yes! You can purchase a license that you can share with your entire team.</Accordion.Panel>
+      </Accordion.Item>
+    </Accordion>
+  )
 };

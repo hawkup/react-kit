@@ -1,9 +1,8 @@
 import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
+import styled from '@emotion/styled';
 
 import { ChevronDown } from '../icons/chevron-down';
-
-import styled from '@emotion/styled';
 
 const StyledRoot = styled(AccordionPrimitive.Root)`
   font-family: 'IBM Plex Sans';

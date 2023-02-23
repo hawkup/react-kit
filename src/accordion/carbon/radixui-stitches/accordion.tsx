@@ -37,7 +37,7 @@ const StyledChevronDown = styled(ChevronDown, {
   }
 })
 
-export function Accordion(props: AccordionPrimitive.AccordionSingleProps) {
+export function Accordion(props: Omit<AccordionPrimitive.AccordionSingleProps, 'type'>) {
   return <StyledRoot {...props} type="single" />
 }
 

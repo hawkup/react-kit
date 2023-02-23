@@ -28,6 +28,6 @@ Accordion.Header = React.forwardRef<HTMLButtonElement, AccordionButtonProps>(fun
   )
 })
 
-Accordion.Panel = React.forwardRef<HTMLDivElement, AccordionPanelProps>(function AccordionHeader({ ...props }, ref) {
-  return <Disclosure.Panel {...props} as="div" ref={ref} className="pt-2 pb-6 px-4 text-gray-500 text-sm" data-testid="accordion-panel" />
+Accordion.Panel = React.forwardRef<HTMLDivElement, AccordionPanelProps>(function AccordionPanel({ ...props }, ref) {
+  return <Disclosure.Panel {...props} as="div" ref={ref} className="pt-2 pb-6 px-4 text-sm" data-testid="accordion-panel" />
 })

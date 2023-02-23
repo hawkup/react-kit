@@ -12,20 +12,22 @@ export function Accordion(props: AccordionProps) {
 }
 
 Accordion.Item = function AccordionItem({ ...props }: AccordionItemProps) {
-  return <Disclosure {...props} as="div" />
+  return <Disclosure {...props} as="div" className="font-['IBM_Plex_Sans'] min-w-[400px] flex flex-col" />
 }
 
 Accordion.Header = React.forwardRef<HTMLButtonElement, AccordionButtonProps>(function AccordionHeader({ children, ...props }, ref) {
   return (
-    <Disclosure.Button {...props} as="button" ref={ref} className="font-['IBM_Plex_Sans'] py-2 flex items-center justify-between border-t border-[#e0e0e0] min-w-[400px]" data-testid="accordion-head">
-      <>
-        {children}
-        <ChevronDown />
-      </>
+    <Disclosure.Button {...props} as="button" ref={ref} className="py-[14px] px-4 flex flex-1 items-center justify-between border-t border-[#e0e0e0] text-sm" data-testid="accordion-head">
+      {({ open }) => (
+        <>
+          {children}
+          <ChevronDown className={open ? 'rotate-180 transform' : ''} />
+        </>
+      )}
     </Disclosure.Button>
   )
 })
 
 Accordion.Panel = React.forwardRef<HTMLDivElement, AccordionPanelProps>(function AccordionHeader({ ...props }, ref) {
-  return <Disclosure.Panel {...props} as="div" ref={ref} className="font-['IBM_Plex_Sans'] text-gray-500 min-w-[400px]" data-testid="accordion-panel" />
+  return <Disclosure.Panel {...props} as="div" ref={ref} className="pt-2 pb-6 px-4 text-gray-500 text-sm" data-testid="accordion-panel" />
 })

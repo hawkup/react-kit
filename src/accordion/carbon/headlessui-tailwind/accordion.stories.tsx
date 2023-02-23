@@ -28,8 +28,20 @@ export const Basic: Story = {
   render: (args) => (
     <Accordion {...args}>
       <Accordion.Item>
-        <Accordion.Header>Is team pricing available?</Accordion.Header>
-        <Accordion.Panel>Yes! You can purchase a license that you can share with your entire team.</Accordion.Panel>
+        <Accordion.Header>Title of accordion</Accordion.Header>
+        <Accordion.Panel>The accordion component delivers large amounts of content in a small space through progressive disclosure. The user gets key details about the underlying content and can choose to expand that content within the constraints of the accordion.</Accordion.Panel>
+      </Accordion.Item>
+      <Accordion.Item>
+        <Accordion.Header>Title of accordion</Accordion.Header>
+        <Accordion.Panel>The accordion component delivers large amounts of content in a small space through progressive disclosure. The user gets key details about the underlying content and can choose to expand that content within the constraints of the accordion.</Accordion.Panel>
+      </Accordion.Item>
+      <Accordion.Item>
+        <Accordion.Header>Title of accordion</Accordion.Header>
+        <Accordion.Panel>The accordion component delivers large amounts of content in a small space through progressive disclosure. The user gets key details about the underlying content and can choose to expand that content within the constraints of the accordion.</Accordion.Panel>
+      </Accordion.Item>
+      <Accordion.Item>
+        <Accordion.Header>Title of accordion</Accordion.Header>
+        <Accordion.Panel>The accordion component delivers large amounts of content in a small space through progressive disclosure. The user gets key details about the underlying content and can choose to expand that content within the constraints of the accordion.</Accordion.Panel>
       </Accordion.Item>
     </Accordion>
   )

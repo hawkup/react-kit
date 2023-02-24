@@ -1,3 +1,5 @@
+@config '../../tailwind.polaris.config.cjs';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

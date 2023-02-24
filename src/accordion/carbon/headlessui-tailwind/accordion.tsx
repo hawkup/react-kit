@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Disclosure, type DisclosureProps, type DisclosureButtonProps, type DisclosurePanelProps } from '@headlessui/react'
 import { ChevronDown } from '../icons/chevron-down'
 
-export type AccordionProps = { children?: React.ReactNode }
+export type AccordionProps = { children: React.ReactNode }
 export type AccordionItemProps = DisclosureProps<'div'>
 export type AccordionButtonProps = DisclosureButtonProps<'button'>
 export type AccordionPanelProps = DisclosurePanelProps<'div'>
@@ -12,7 +12,7 @@ export function Accordion(props: AccordionProps) {
 }
 
 Accordion.Item = function AccordionItem({ ...props }: AccordionItemProps) {
-  return <Disclosure {...props} as="div" className="font-['IBM_Plex_Sans'] min-w-[400px] flex flex-col" />
+  return <Disclosure {...props} as="div" className="min-w-[400px] flex flex-col" />
 }
 
 Accordion.Header = React.forwardRef<HTMLButtonElement, AccordionButtonProps>(function AccordionHeader({ children, ...props }, ref) {
